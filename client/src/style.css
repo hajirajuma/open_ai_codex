@@ -17,7 +17,7 @@ body {
     align-items: center;
     color: #fff;
     font-size: 18px;
-    padding-top: 420px;
+    padding-top: 550px;
     }
 .profile {
     width: 60px;
@@ -163,9 +163,9 @@ button img {
   width: 20px;
   height: 20px;
 }
-  */
+  
 
- /*Responsive adjustments */
+ Responsive adjustments 
 @media (max-width: 600px) {
   #app {
     max-width: 100%;
@@ -189,4 +189,5 @@ button img {
     justify-content: center;
   }
 }
+  */
   
