@@ -1,5 +1,7 @@
-import bot from '../assets/bot.svg';
-import user from '../assets/user.svg';
+const bot = './assets/bot.svg';
+const user = './assets/user.svg';
+/*import bot from '../assets/bot.svg';
+import user from '../assets/user.svg'; */
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
@@ -58,9 +60,12 @@ const handleSubmit = async (e) => {
 
   const data = new FormData(form);
 
-  
-  chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
-  form.reset();
+  const prompt = data.get('prompt');
+chatContainer.innerHTML += chatStripe(false, prompt);
+form.reset();
+
+ /* chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
+  form.reset();*/
 
   
   const uniqueId = generateUniqueId();
@@ -70,16 +75,17 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
-  try{
-    const response = await fetch('http://localhost:5000', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        prompt: data.get('prompt')
-      })
-    });
+  try {
+  const response = await fetch('http://localhost:5000', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      prompt: prompt  // or just { prompt }
+    })
+  });  
+    
 
     clearInterval(loadInterval);
     messageDiv.innerHTML = '';
@@ -101,8 +107,15 @@ const handleSubmit = async (e) => {
 };
 
 form.addEventListener('submit', handleSubmit);
-form.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') {  
+form.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
     handleSubmit(e);
   }
 });
+
+/*form.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {  
+    handleSubmit(e);
+  }
+});*/
