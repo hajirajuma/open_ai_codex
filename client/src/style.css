@@ -87,14 +87,14 @@ form img {
 }
     
     /* Reset default browser styles */
-/** {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya sans" , sans-serif;
 }
 
-/* Basic body styles 
+ Basic body styles 
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -106,7 +106,7 @@ body {
   padding: 20px;
 }
 
-/* App container 
+ App container 
 #app {
   width: 100%;
   max-width: 800px;
@@ -118,7 +118,7 @@ body {
   flex-direction: column;
 }
 
-/* Chat container (scrollable area) 
+ Chat container (scrollable area) 
 #chat_container {
   flex: 1;
   padding: 20px;
@@ -126,7 +126,7 @@ body {
   height: 60vh;
 }
 
-/* Form styles 
+/Form styles 
 form {
   display: flex;
   padding: 15px 20px;
@@ -135,7 +135,7 @@ form {
   align-items: center;
 }
 
-/* Textarea styling 
+ Textarea styling 
 textarea {
   flex: 1;
   resize: none;
@@ -147,7 +147,7 @@ textarea {
   min-height: 40px;
 }
 
-/* Submit button 
+ Submit button 
 button {
   background-color: #007bff;
   border: none;
@@ -164,7 +164,7 @@ button img {
   height: 20px;
 }
 
-/* Responsive adjustments 
+ Responsive adjustments 
 @media (max-width: 600px) {
   #app {
     max-width: 100%;
@@ -188,3 +188,4 @@ button img {
     justify-content: center;
   }
 }
+  */
