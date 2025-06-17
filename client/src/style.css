@@ -163,8 +163,9 @@ button img {
   width: 20px;
   height: 20px;
 }
+  */
 
- Responsive adjustments 
+ /*Responsive adjustments */
 @media (max-width: 600px) {
   #app {
     max-width: 100%;
@@ -188,4 +189,4 @@ button img {
     justify-content: center;
   }
 }
-  */
+  
