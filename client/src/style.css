@@ -17,7 +17,7 @@ body {
     align-items: center;
     color: #fff;
     font-size: 18px;
-    padding: 10px;
+    padding-top: 550px;
     }
 .profile {
     width: 60px;
@@ -27,7 +27,7 @@ body {
     align-items: center;
     background: #5436da;
     display: flex;
-}    
+}   
 .ai .profile {
     background: #10a37f;
 } 
@@ -52,6 +52,7 @@ hides scrobar
 }
 form {
     width: 100%;
+    height: auto;
     max-width: 1280px;
     margin: 0 auto;
     padding : 10px ;
@@ -59,6 +60,9 @@ form {
     display : flex;
     flex-direction: row;
     gap : 10px;
+    margin-bottom: 50px;
+    justify-content: baseline;
+    align-items: baseline;
 
 }    
 textarea{
